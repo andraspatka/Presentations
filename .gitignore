@@ -8,3 +8,5 @@
 *.blg
 *.qlmat
 *.log
+*.snm
+*.nav
