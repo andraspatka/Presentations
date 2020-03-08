@@ -57,24 +57,61 @@ Okok:
 
 # Brainstorming
 
+Ahogy jönnek az új ötletek, úgy lehet rájuk építeni, ezeket feljavítani
+
 ötletbörze
 
 - csoportos döntéshozatal, problémamegoldásra használható
 - tág fogalom, az ezután bemutatott módszerek is lényegében brainstorming-ok
 - moderátor hasznos lehet
-- szükség van egy tábl
+- szükség van egy táblára
+
+Előnyök:
+- egyszerű módszer
+- gyorsan lehet megoldást találni
+
+Hátrányok:
+- csoportnyomás
+- a csoport tagjai sokszor nem vesznek egyenlő arányban részt
+- szükséges egy felügyelő
 
 
 # 635 példa
 
 Hogyan tudjuk a csokoládépuddingot jobban értékesíteni?
 
-új csomagolás, hűségpontok, kevesebb cukor
-bombon formájában, hűségkártya, hangsúlyozni az egészséges étkezést
-pudding bombonban, hűségpontok és hűségkártya az egész pudding termékvonalra, az egészség jólléthez vezet (a csokoládé boldoggá tesz)
-a cukorkákat nem kell hűvösen tartani -> el lehet adni a terméket a kasszánál is, díjak ha a bizonyos pontmennyiség el van érve, figyelemfelhívó kampányok arról, hogy a csokoládé milyen egészséges
-gyűjtőalbumot lehetne adni a kasszánál a gyerekeknek, a pontokat be lehet váltani lehuzikra, kiegyensúlyozott, boldog és egészséges család a csokoládépudding fogyasztása által
-kitöltött gyűktőalbumot be lehet cserélni egy ingyenes belépőre az állatkertbe, egy múzeumba, stb, az első 5 aki 1000 pontot összegyűjt, el lesz hívva a puddinggyárba, családi kirándulások a természetbe lehetővé tehetők a csokoládépudding által
+Előnyök:
+- mindenki ugyanolyan mennyiségben vesz részt
+- 30 perc alatt 108 ötlet születik (6 * 3 * 6)
+- nem feltétlenül szükséges moderátor
+
+Hátrányok:
+- az 5 perces időkeret nyomást gyakorolhat sokakra
+
+# Philips 66-os módszer
+
+buzz session, discussion 66
+
+ennél a módszernél 6 fős csoport 6 perces megbeszélés alatt próbál megoldani egy problémát.
+Brainstorming nagyon sok résztvevővel.
+Nagyobb csoportok esetében jó használni.
+A számok jelentése:
+- 6: 6 személyes csoportok
+- 6: 6 perces beszélgetések
+
+Menet:
+- a résztvevők csoportra való osztása
+- mindegyik csoport külön tart egy brainstorming-ot
+- az idő lejárta után minden csoport kiválasztja a legjobb ötleteit és ezt bemutatja mindenki előtt
+
+Előny:
+- működik sok résztvevőre
+
+Hátrány:
+- a kijelölt személy bemutatója gyakran össze van csapva, ezért nehezen jöhet át az ötlet
+- ilyen kevés idő alatt a csoport nem alakul ki rendesen, ezért a beszélgetés felületes lehet
+
+# Edward de Bono 6 gondolkodó kalap
 
 
 # Források
