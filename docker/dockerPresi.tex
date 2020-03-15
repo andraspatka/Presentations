@@ -1,0 +1,173 @@
+\documentclass{beamer}
+\usetheme{metropolis}
+
+\usepackage{graphicx}
+\usepackage{appendixnumberbeamer}
+
+\title{Docker, CI, Travis}
+\author{Patka Zsolt-András}
+\institute{Sapientia - Computer Science BSc.}
+\date{2020.03.16}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{What is this presentation about?}
+\tableofcontents
+\end{frame}
+
+\section{Continous Integration}
+
+\subsection{CI \/ CD}
+\begin{frame}{\secname : \subsecname}
+Continous Integration \/ Continous Delivery
+    \begin{enumerate}
+        \item Plan
+        \item Code
+        \item Build
+        \item Test
+        \item Release
+        \item Deploy
+        \item Operate
+        \item Measure
+        \item Repeat
+    \end{enumerate}
+\end{frame}
+
+
+\section{Docker}
+
+\subsection{Dockerfile}
+\begin{frame}{\secname : \subsecname}
+
+\begin{enumerate}
+    \item How should our image look like?
+    \item Analog: Source code for Windows
+\end{enumerate}
+\end{frame}
+
+% TODO: Insert picture
+
+\subsection{Docker image}
+\begin{frame}{\secname : \subsecname}
+
+% TODO: Insert picture
+
+\begin{enumerate}
+    \item Result of building the Dockerfile
+    \item Contains everything needed to spin up your application
+    \item Analog: CD containing Windows
+\end{enumerate}
+
+\end{frame}
+
+\subsection{Docker container}
+\begin{frame}{\secname : \subsecname}
+
+% TODO: Insert picture
+
+\begin{enumerate}
+    \item Result of starting a docker image
+    \item Is alive, runs your application
+    \item Analog: Your PC after you've installed Windows
+\end{enumerate}
+
+\end{frame}
+
+
+\section{How to: CI}
+
+\subsection{Travis}
+\begin{frame}{\secname : \subsecname}
+
+% TODO: Insert example .travis.yml file
+
+\begin{enumerate}
+    \item Free (has a paid version as well)
+    \item Can easily be integrated with Github
+    \item Uses Docker containers internally
+    \item .travis.yml: contains build steps to be executed on each push
+\end{enumerate}
+\end{frame}
+
+\subsection{Github Actions}
+\begin{frame}{\secname : \subsecname}
+
+% TODO: Insert example .github yml file
+
+\begin{enumerate}
+    \item Free
+    \item It's trivial to integrate it with Github
+    \item Uses Docker containers internally
+    \item Easy to use
+\end{enumerate}
+
+\end{frame}
+
+
+\section{Live demo}
+
+\subsection{Backend}
+\begin{frame}{\secname : \subsecname}
+
+\begin{enumerate}
+    \item Spring boot app
+    \item Has two simple endpoints
+    \item Travis automatically (on each push):
+    \begin{enumerate}
+        \item Runs the build
+        \item Runs the tests
+        \item Creates a .jar file
+        \item Build the Dockerfile
+        \item Pushes the Docker image to DockerHub
+    \end{enumerate}
+\end{enumerate}
+
+\end{frame}
+
+\subsection{Frontend}
+\begin{frame}{\secname : \subsecname}
+
+\begin{enumerate}
+    \item React
+    \item Can send a request to the backend
+    \item Travis automatically (on each push):
+    \begin{enumerate}
+        \item Runs the build
+        \item Runs the tests
+        \item Build the Dockerfile (two stage build)
+        \item Pushes the Docker image to DockerHub
+    \end{enumerate}
+\end{enumerate}
+
+\end{frame}
+
+\section{Advices}
+
+\subsection{Docker best practices}
+\begin{frame}{\secname : \subsecname}
+\end{frame}
+
+\subsection{Docker commands cheatsheet}
+\begin{frame}{\secname : \subsecname}
+    %TODO: Insert link to cheatsheet
+\end{frame}
+
+
+\begin{frame}
+\centering
+{\Huge Thank you for your attention!}
+\end{frame}
+
+\appendix{Sources}
+\begin{footnotesize}
+    \begin{itemize}
+        \item https://mherman.org/blog/dockerizing-a-react-app/
+    \end{itemize}
+\end{footnotesize}
+
+\end{document}
