@@ -1,16 +1,5 @@
 # Docker
 
-## Structure
+Take a look at **cheatSheet.md** for some useful and commonly used docker commands.
 
-- What is Docker, why Docker?
-- Dockerfile, docker image, docker container
-- Travis CI
-- Github Actions
-- Docker Compose
-- Live demo
-- Best practices
-- "Debugging"
-
-## Sources
-
-https://mherman.org/blog/dockerizing-a-react-app/
+**dockerPresi.pdf** is a short ugly presentation about docker.
