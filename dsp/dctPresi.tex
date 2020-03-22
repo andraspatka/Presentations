@@ -1,0 +1,94 @@
+\documentclass{beamer}
+\usetheme{metropolis}
+
+\usepackage{graphicx}
+\usepackage{appendixnumberbeamer}
+
+\title{DCT - Diszkrét koszinusz-transzformáció}
+\author{Patka Zsolt-András}
+\institute{Sapientia EMTE - Számítástechnika IV}
+\date{2020.03.09}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Miről lesz szó?}
+\tableofcontents
+\end{frame}
+
+\section{DCT}
+
+\subsection{Fourier-transzformáció}
+\begin{frame}{\secname : \subsecname}
+    \begin{itemize}
+        \item Periódikus jel felírása szinuszok és koszinuszok kobinációjaként
+        \item $ X_k = \sum_{n=0}^{N - 1} x_n * [\cos(\frac{2 \pi}{N} kn) - i * sin(\frac{2\pi}{N} kn)]$
+    \end{itemize}
+\end{frame}
+
+\subsection{DCT}
+\begin{frame}{\secname : \subsecname}
+    \begin{itemize}
+        \item DCT-I:
+        \begin{itemize}
+            \item több ismeret, információ
+            \item DCT-I: $ X_k = \frac{1}{2} (x_0 + (-1)^kx_{N-1}) + \sum_{n=0}^{N - 1} x_n * \cos[\frac{\pi}{N - 1} nk]$
+        \end{itemize}
+        \item DCT-II:
+        \begin{itemize}
+            \item DCT-II: $ X_k = \sum_{n=0}^{N - 1} x_n * \cos[\frac{\pi}{N} * (n + \frac{1}{2})k] $ $k=0,...,N-1$
+            \item leggyakrabban használt forma
+        \end{itemize}
+    \end{itemize}
+    
+\end{frame}
+
+\subsection{Hátrányok}
+\begin{frame}{\secname : \subsecname}
+    \begin{itemize}
+        \item hosszabb időt vesz igénybe
+        \item előfordulhat, hogy egyetlen személy uralja a folyamatot
+        \item rossz megoldás elfogadása, beletörődés
+        \item csoportnyomás
+    \end{itemize}
+\end{frame}
+
+
+\section{DCT alkalmazása - JPEG}
+
+\subsection{Brainstorming}
+\begin{frame}{\secname : \subsecname}
+
+A brainstorming (ötletbörze) lényege az, hogy a gondolkodási folyamat ne legyen megszakítva.
+
+Moderátor: \textbf{ajánlott}
+
+Szabályai:
+\begin{enumerate}
+    \item fókuszálj a mennyiségre
+    \item ne kritizálj
+    \item osszd meg az ötleteidet, még akkor is ha ezek szokatlanok
+    \item kombináld és javítsd az ötleteket
+\end{enumerate}
+
+
+\begin{frame}
+\centering
+{\Huge Köszönöm a figyelmet!}
+\end{frame}
+
+\appendix{Források}
+\begin{footnotesize}
+    \begin{itemize}
+        \item https://en.wikipedia.org/wiki/JPEG#Discrete_cosine_transform
+        \item https://www.youtube.com/watch?v=_bltj_7Ne2c
+        \item https://www.youtube.com/watch?v=n_uNPbdenRs
+        \item https://www.youtube.com/watch?v=Q2aEzeMDHMA&list=RDCMUC9-y-6csu5WGm29I7JiwpnA&start_radio=1&t=6
+    \end{itemize}
+\end{footnotesize}
+
+\end{document}
