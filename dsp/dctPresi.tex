@@ -20,12 +20,35 @@
 \tableofcontents
 \end{frame}
 
+\section{Adattömörítés}
+
+\subsection{Veszteségmentes adattömörítés}
+\begin{frame}{\secname : \subsecname}
+\begin{enumerate}
+    \item Lehetséges a tömörített adatból az eredeti adatok pontos rekonstrukciója
+    \item Huffman
+    \beging{itemize}
+    \item változó hosszuságú kódok
+    \item gyakrabban előfordult szimbólumok rövidebb kódot kapnak
+    \end{itemize}
+    \item Például: Szöveges állományok tömörítése
+\end{enumerate}    
+\end{frame}
+
+\subsection{Veszteséges adattömörítés}
+\begin{frame}{\secname : \subsecname}
+\begin{enumerate}
+    \item A tömörített adatból az eredeti adatok nem pontos rekonstrukcióját teszi lehetővé
+    \item Például: képek (JPEG), videók tömörítése (MPEG, H.26X)
+\end{enumerate}    
+\end{frame}
+
 \section{DCT}
 
 \subsection{Fourier-transzformáció}
 \begin{frame}{\secname : \subsecname}
     \begin{itemize}
-        \item Periódikus jel felírása szinuszok és koszinuszok kobinációjaként
+        \item Periódikus jel felírása szinuszok és koszinuszok kombinációjaként
         \item $ X_k = \sum_{n=0}^{N - 1} x_n * [\cos(\frac{2 \pi}{N} kn) - i * sin(\frac{2\pi}{N} kn)]$
     \end{itemize}
 \end{frame}
@@ -35,7 +58,6 @@
     \begin{itemize}
         \item DCT-I:
         \begin{itemize}
-            \item több ismeret, információ
             \item DCT-I: $ X_k = \frac{1}{2} (x_0 + (-1)^kx_{N-1}) + \sum_{n=0}^{N - 1} x_n * \cos[\frac{\pi}{N - 1} nk]$
         \end{itemize}
         \item DCT-II:
@@ -45,16 +67,6 @@
         \end{itemize}
     \end{itemize}
     
-\end{frame}
-
-\subsection{Hátrányok}
-\begin{frame}{\secname : \subsecname}
-    \begin{itemize}
-        \item hosszabb időt vesz igénybe
-        \item előfordulhat, hogy egyetlen személy uralja a folyamatot
-        \item rossz megoldás elfogadása, beletörődés
-        \item csoportnyomás
-    \end{itemize}
 \end{frame}
 
 
@@ -88,6 +100,7 @@ Szabályai:
         \item https://www.youtube.com/watch?v=_bltj_7Ne2c
         \item https://www.youtube.com/watch?v=n_uNPbdenRs
         \item https://www.youtube.com/watch?v=Q2aEzeMDHMA&list=RDCMUC9-y-6csu5WGm29I7JiwpnA&start_radio=1&t=6
+        \item https://hu.wikipedia.org/wiki/Vesztes\%C3\%A9gmentes_t\%C3\%B6m\%C3\%B6r\%C3\%ADt\%C3\%A9s
     \end{itemize}
 \end{footnotesize}
 
