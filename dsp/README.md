@@ -9,7 +9,7 @@
 # Veszteség nélküli tömörítés
 
 - lehetséges a tömörített adatokból az eredeti adat pontos rekonstrukciója
-- Huffman kódolás
+- Huffman kódolás: Shannon: minél nagyobb a valószínűsége egy esemény bekövetkezésének, annál kevesebb információt szolgál
 - példa, kép
 
 # Veszteséges tömörítés
@@ -42,13 +42,21 @@ Béka, JPEG példa:
   - Cr - chroma piros különbség
   - Miért? Egy színkanálisban van a világosság információ, amire a legérzékenyebb az emberi szem. A többi színkanálist lehet ritkábban mintavételezni, így már el tudunk érni egy fokú sűrítést
 - Downsampling
+  - Downsampling.png https://en.wikipedia.org/wiki/Chroma_subsampling
 - A képet 8x8-as részképekre bontjuk
 - DCT:
   - Az értékek 0 és 255 között vannak, ezeket át kell változtatni, hogy -128 és 127 között legyenek (cos -1 és 1 között veszi fel az értékeit)
+  - átmegyünk a frekvencia tartományba a DCT segítségével
+    - u horizontális index, egész szám 0 és 8 között
+    - v függőleges index, egész szám 0 és 8 között
+    - alfa(u) normalizáláshoz, legyen orthonormális a transzformáció
+    - g(x,y) pixel érték x, y koordinátában
+    - G(u,v) DCT együttható (u,v) koordinátákban
   - együtthatók kiszámolása
 - Kvantálás
   - kvantálási mátrix
 - Entrópia kódolás
+  - feltúrbózott Huffman kódolás
 
 # Forrasok
 
