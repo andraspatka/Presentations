@@ -44,10 +44,10 @@ Continous Integration \/ Continous Delivery
 \subsection{Dockerfile}
 \begin{frame}{\secname : \subsecname}
 
-\begin{enumerate}
+\begin{itemize}
     \item How should our image look like?
     \item Analog: Source code for Windows
-\end{enumerate}
+\end{itemize}
 \end{frame}
 
 % TODO: Insert picture
@@ -57,11 +57,11 @@ Continous Integration \/ Continous Delivery
 
 % TODO: Insert picture
 
-\begin{enumerate}
+\begin{itemize}
     \item Result of building the Dockerfile
     \item Contains everything needed to spin up your application
     \item Analog: CD containing Windows
-\end{enumerate}
+\end{itemize}
 
 \end{frame}
 
@@ -70,11 +70,11 @@ Continous Integration \/ Continous Delivery
 
 % TODO: Insert picture
 
-\begin{enumerate}
+\begin{itemize}
     \item Result of starting a docker image
     \item Is alive, runs your application
     \item Analog: Your PC after you've installed Windows
-\end{enumerate}
+\end{itemize}
 
 \end{frame}
 
@@ -82,22 +82,57 @@ Continous Integration \/ Continous Delivery
 \section{How to: CI}
 
 \subsection{Travis}
-\begin{frame}{\secname : \subsecname}
+\begin{frame}[fragile]{\secname : \subsecname}
 
 % TODO: Insert example .travis.yml file
 
+\begin{columns}
+\begin{column}{0.3\textwidth}
 \begin{enumerate}
     \item Free (has a paid version as well)
     \item Can easily be integrated with Github
     \item Uses Docker containers internally
     \item .travis.yml: contains build steps to be executed on each push
 \end{enumerate}
+\end{column}
+
+\begin{column}{0.7\textwidth}
+
+\begin{scriptsize}
+\begin{verbatim}
+
+language: java
+services:
+ - docker
+install: true
+os: linux
+dist: trusty
+jdk: openjdk8
+before_script: cd backend
+script:
+ - ./gradlew build && 
+ ./gradlew test && ./gradlew bootJar
+after_success:
+ - docker build -t demobackend .
+ - docker tag demobackend 
+ "$DOCKER_USERNAME"/demobackend:latest
+ - echo "$DOCKER_PASSWORD" | 
+ docker login -u "$DOCKER_USERNAME" --password-stdin
+ - docker push "$DOCKER_USERNAME"/demobackend
+
+\end{verbatim}
+\end{scriptsize}
+
+\end{column}
+\end{columns}
 \end{frame}
 
 \subsection{Github Actions}
-\begin{frame}{\secname : \subsecname}
+\begin{frame}[fragile]{\secname : \subsecname}
 
 % TODO: Insert example .github yml file
+\begin{columns}
+\begin{column}{0.3\textwidth}
 
 \begin{enumerate}
     \item Free
@@ -105,7 +140,43 @@ Continous Integration \/ Continous Delivery
     \item Uses Docker containers internally
     \item Easy to use
 \end{enumerate}
+\end{column}
 
+\begin{column}{0.7\textwidth}
+
+\begin{tiny}
+\begin{verbatim}
+on:
+    push:
+    branches: 
+        - develop
+        - master
+    pull_request:
+    branches: 
+        - master
+jobs:
+    build:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.6.8
+        uses: actions/setup-python@v1
+        with:
+        python-version: 3.6.8
+    - name: Install dependencies
+        run: |
+        python -m pip install --upgrade pip
+    - name: Test with pytest
+        working-directory: src
+        run: |
+        pip install pytest
+        pytest
+
+\end{verbatim}
+\end{tiny}
+
+\end{column}
+\end{columns}
 \end{frame}
 
 
@@ -114,7 +185,7 @@ Continous Integration \/ Continous Delivery
 \subsection{Backend}
 \begin{frame}{\secname : \subsecname}
 
-\begin{enumerate}
+\begin{itemize}
     \item Spring boot app
     \item Has two simple endpoints
     \item Travis automatically (on each push):
@@ -125,14 +196,14 @@ Continous Integration \/ Continous Delivery
         \item Build the Dockerfile
         \item Pushes the Docker image to DockerHub
     \end{enumerate}
-\end{enumerate}
+\end{itemize}
 
 \end{frame}
 
 \subsection{Frontend}
 \begin{frame}{\secname : \subsecname}
 
-\begin{enumerate}
+\begin{itemize}
     \item React
     \item Can send a request to the backend
     \item Travis automatically (on each push):
@@ -142,19 +213,17 @@ Continous Integration \/ Continous Delivery
         \item Build the Dockerfile (two stage build)
         \item Pushes the Docker image to DockerHub
     \end{enumerate}
-\end{enumerate}
+\end{itemize}
 
 \end{frame}
 
 \section{Advices}
 
-\subsection{Docker best practices}
-\begin{frame}{\secname : \subsecname}
-\end{frame}
-
 \subsection{Docker commands cheatsheet}
 \begin{frame}{\secname : \subsecname}
-    %TODO: Insert link to cheatsheet
+    You can find a cheat sheet containing commonly used Docker commands:
+
+    \url{https://github.com/andraspatka/Presentations/blob/master/docker/cheatSheet.md}
 \end{frame}
 
 
