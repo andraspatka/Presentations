@@ -11,6 +11,7 @@
 - lehetséges a tömörített adatokból az eredeti adat pontos rekonstrukciója
 - Huffman kódolás: Shannon: minél nagyobb a valószínűsége egy esemény bekövetkezésének, annál kevesebb információt szolgál
 - példa, kép
+- 7 bit hosszú Huffman-al, 10 bit hosszú nélküle
 
 # Veszteséges tömörítés
 
